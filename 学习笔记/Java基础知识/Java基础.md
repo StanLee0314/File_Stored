@@ -1,6 +1,6 @@
 #JDK是个什么玩意
 
-![image-20191023152949573](/Users/liyuxuan/Library/Application Support/typora-user-images/image-20191023152949573.png)
+![Servlet 架构](https://www.google.com/imgres?imgurl=http%3A%2F%2Fimg.3xmq.com%2Fb23ca32645b7489e8b14be07972d0c97.jpeg%3FimageView2%2F2%2Fw%2F768%2Fformat%2Fjpg%2Finterlace%2F0%2Fq&imgrefurl=https%3A%2F%2Fblog.csdn.net%2FAlbenXie%2Farticle%2Fdetails%2F81460560&docid=tRhr6N0wNQk3yM&tbnid=sPDl0zM2pdrCzM%3A&vet=10ahUKEwjUmuer9tXlAhXCo1kKHcfACe4QMwhEKAIwAg..i&w=500&h=333&itg=1&bih=740&biw=1491&q=JDK%E6%98%AF%E4%BB%80%E4%B9%88&ved=0ahUKEwjUmuer9tXlAhXCo1kKHcfACe4QMwhEKAIwAg&iact=mrc&uact=8)
 
 JDK(Java Development Kit) 是 Java 语言的软件开发工具包(SDK)。在JDK的安装目录下有一个jre目录，里面有两个文件夹bin和lib，在这里可以认为bin里的就是jvm，lib中则是jvm工作所需要的类库，而jvm和 lib合起来就称为jre。
 
@@ -78,4 +78,4 @@ POJO(Plain ordinary java object) 简单java对象
 
 例子是根据当前正在进行的绩效评估事件总结，简单的例子可以参照上述知乎上面大神的回答。
 
-![image-20191023153549377](/Users/liyuxuan/Documents/Java对象传递.png)
+![image-20191023153549377](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwim757P99XlAhXFrFkKHWzfBJMQjRx6BAgBEAQ&url=http%3A%2F%2Fwww.programmersought.com%2Farticle%2F6627861881%2F&psig=AOvVaw2txvZs2gMy5B_mzwlJpnOy&ust=1573141569093579)
