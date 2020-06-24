@@ -67,6 +67,7 @@ def single_variable():
 def multi_variable():
     path ='ex1data2.txt'
     data = pd.read_csv(path, header=None, names=['Size', 'Bedrooms', 'Price'])
+    #归一化，使其更快收敛
     data = (data - data.mean())/data.std()
     print(data.head())
     data.insert(0, 'Ones', 1)
