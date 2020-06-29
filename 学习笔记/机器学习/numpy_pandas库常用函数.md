@@ -96,11 +96,29 @@ data.describe()
    data.iolc[[0:3],[3,4]]  #提取0-2行，3列
    ```
 
+4. isin函数 每个数据判断是否存在
 
-#matplotlib.pyplot库
+   0      True
+   1      True
+   2      True
+   3     False
+   4     False
 
-```
+   ```python
+   #筛选某个值在某个列表中
+   df = df[df['subject_1'].isin([1, 2, 13, 18, 25])]
+   ```
 
+# matplotlib.pyplot库
+
+```python
+    fig, ax = plt.subplots(figsize=(12, 8))
+    ax.scatter(positive['exam1'], positive['exam2'], s=50, c='b', marker='o', label='Admitted')
+    ax.scatter(negative['exam1'], negative['exam2'], s=50, c='r', marker='x', label='Not Admitted')
+    ax.legend()
+    ax.set_xlabel('Exam 1 Score')
+    ax.set_ylabel('Exam 2 Score')
+    plt.show()
 ```
 
 # python list np.ndarray  np.matrix区别
