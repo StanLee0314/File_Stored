@@ -326,5 +326,18 @@ Linux 分号，&&, ||
     
       ||   ： 顺序执行各条命令， 只有当前面一个执行失败的时候， 才执行后面的。
 
+#### Linux tar常用
+tar命令几个常用参数解读：
+-c或--create：建立新的备份文件； 
+-x或--extract或--get：从备份文件中还原文件；
+-t或--list：列出备份文件的内容； 
+-f<备份文件>或--file=<备份文件>：指定备份文件； 
+-v或--verbose：显示指令执行过程；
+-z或--gzip或--ungzip：通过gzip指令处理备份文件； 
+-j：支持bzip2解压文件；
 
+举例说明如下：
+打包：tar -cvf test.tar test（test为文件或者目录）
+解包：tar -xvf test.tar
+查询包内容：tar -tvf test.tar
 
