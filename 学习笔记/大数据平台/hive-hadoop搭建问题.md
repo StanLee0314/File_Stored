@@ -44,3 +44,4 @@ integration code + the core code. Adding both will trip up internal checks for o
 pro:FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. org/apache/hadoop/hive/serde2/SerDe
 您可以添加与您的版本对应的jar add jar HIVE_HOME/lib/hive-hcatalog-core-2.3.2.jar,
 ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe'
+https://repo1.maven.org/maven2/org/apache/hive/hcatalog/hive-hcatalog-core/3.1.0/
