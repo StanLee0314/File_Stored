@@ -29,7 +29,14 @@ $ cp /opt/shared/hadoop-3.2.1/share/hadoop/hdfs/lib/guava-27.0-jre.jar /opt/shar
 problem: FAILED: SemanticException Cannot find class 'org.elasticsearch.hadoop.hive.ESStorageHandler'
 I solved the problem after adding elasticsearch-hadoop-2.3.0.jar and elasticsearch-hadoop-hive-2.3.0.jar files in $HIVE_HOME/lib folder.
 # 7.
-problem:FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. java.lang.RuntimeException: MetaException(message:java.lang.NoClassDefFoundError org/apache/commons/httpclient/HttpConnectionManager)
+problem:FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. java.lang.RuntimeException:
+MetaException(message:java.lang.NoClassDefFoundError org/apache/commons/httpclient/HttpConnectionManager)
 I followed the roadmap proposed by Sergio, but used this jar:
 
 https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient/3.1.0.redhat-8 84
+# 8. 
+problem: FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. org.elasticsearch.hadoop.EsHadoopIllegalArgumentException: Cannot
+detect ES version - typically this happens if the network/Elasticsearch cluster is not accessible or when targeting a WAN/Cloud instance without the proper
+setting 'es.nodes.wan.only'
+solve: 只引一个包 First, make sure that ONLY ONE of those jars are added. The first one there includes all integrations, and the second one includes only the hive 
+integration code + the core code. Adding both will trip up internal checks for only one jar on the classpath
