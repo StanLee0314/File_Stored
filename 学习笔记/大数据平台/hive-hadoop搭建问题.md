@@ -25,6 +25,7 @@ Underlying cause: java.lang.ClassNotFoundException : com.mysql.jdbc.Driver
 java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkArgument
 $ rm /opt/shared/apache-hive-3.1.2-bin/lib/guava-19.0.jar
 $ cp /opt/shared/hadoop-3.2.1/share/hadoop/hdfs/lib/guava-27.0-jre.jar /opt/shared/apache-hive-3.1.2-bin/lib/
+
 #6.
 problem: FAILED: SemanticException Cannot find class 'org.elasticsearch.hadoop.hive.ESStorageHandler'
 I solved the problem after adding elasticsearch-hadoop-2.3.0.jar and elasticsearch-hadoop-hive-2.3.0.jar files in $HIVE_HOME/lib folder.
