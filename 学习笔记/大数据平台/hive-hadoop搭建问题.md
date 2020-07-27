@@ -45,3 +45,44 @@ pro:FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.D
 您可以添加与您的版本对应的jar add jar HIVE_HOME/lib/hive-hcatalog-core-2.3.2.jar,
 ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe'
 https://repo1.maven.org/maven2/org/apache/hive/hcatalog/hive-hcatalog-core/3.1.0/
+# 10.
+pro: Could not find any valid local directory for nmPrivate/container_1595384260109_0006_02_0000011738df49a11.tokens
+For more detailed output, check the application tracking page: http://csiv-12:8088/cluster/app/application_1595384260109_0006 
+Then click on links to logs of each attempt.. Failing the application.
+Please check whether your <HADOOP_HOME>/etc/hadoop/mapred-site.xml contains the below configuration:
+<property>
+  <name>yarn.app.mapreduce.am.env</name>
+  <value>HADOOP_MAPRED_HOME=${full path of your hadoop distribution directory}</value>
+</property>
+<property>
+  <name>mapreduce.map.env</name>
+  <value>HADOOP_MAPRED_HOME=${full path of your hadoop distribution directory}</value>
+</property>
+<property>
+  <name>mapreduce.reduce.env</name>
+  <value>HADOOP_MAPRED_HOME=${full path of your hadoop distribution directory}</value>
+</property>
+solution: mapred -site.xml
+```
+<property>
+ 22     <name>mapreduce.framework.name</name>
+ 23     <value>yarn</value>
+ 24 </property>
+ 25  <property>
+ 26         <name>hadoop.tmp.dir</name>
+ 27         <value>/usr/local/hadoop/data/</value>
+ 28         <description>hadoop数据存放</description>
+ 29  </property>
+ 30  <property>
+ 31         <name>yarn.app.mapreduce.am.env</name>
+ 32         <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+ 33     </property>
+ 34     <property>
+ 35         <name>mapreduce.map.env</name>
+ 36         <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+ 37     </property>
+ 38     <property>
+ 39         <name>mapreduce.reduce.env</name>
+ 40         <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+ 41     </property>
+```
