@@ -93,3 +93,5 @@ pro:  java.lang.ClassNotFoundException: org.apache.hive.hcatalog.data.JsonSerDe
     <value>file:///usr/local/Cellar/hive–1.2.1/lib/hive-hcatalog-core-1.2.1.jar</value>
   </property>
 ```
+# 12.
+pro:Error: java.lang.ClassNotFoundException: org.apache.commons.httpclient.URIException
