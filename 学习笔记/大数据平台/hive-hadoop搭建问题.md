@@ -86,3 +86,10 @@ solution: mapred -site.xml
  40         <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
  41     </property>
 ```
+# 11. 
+pro:  java.lang.ClassNotFoundException: org.apache.hive.hcatalog.data.JsonSerDe
+```<property>
+    <name>hive.aux.jars.path</name>
+    <value>file:///usr/local/Cellar/hive–1.2.1/lib/hive-hcatalog-core-1.2.1.jar</value>
+  </property>
+```
