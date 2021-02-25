@@ -1,4 +1,4 @@
-package class1Sort;
+package basic_class_01;
 
 import java.util.Arrays;
 

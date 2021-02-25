@@ -1,4 +1,4 @@
-package class1Sort;
+package basic_class_01;
 
 //选择排序
 public class SelectionSort {
